@@ -1,0 +1,33 @@
+<! DOCTYPE html>
+<html>
+<body>
+
+<h1>The onclick Event</h1>
+
+<p>The onclick event is used to trigger a function when an element is clicked on</p>
+
+<p>Click the button to trigger a function that will output "Hello World" in a p element with id="demo".</p>
+
+<button onclick="myFunction()">Click me</button>
+
+<p id="demo"></p>
+
+<script>
+	function myFunction(){
+		document.getElementById("demo").innerHTML = "Hello World";
+	}
+</script>
+</body>
+</html>
+
+<!-- Here the button is displayed with the text "click me".
+	When the button is clicked, it calls the myFunction(), which is javascript that is embedded into the html using the <script> tag. 
+	document.getElementById() looks for the element matching the "demo" ID.
+	document.getElementById("demo").innerHTML will insert whatever is on the other side of the '=' into whatever tag is assigned to that ID.
+
+	Therefore
+	-button is clicked and triggers the myFunction() function
+	- document.getElementById("demo").innerHTML inserts whatever string is assigned to into it in the matching id
+	- the function myFunction() is embedded into the html with the <script> tag
+
+-->

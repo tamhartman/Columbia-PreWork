@@ -1,0 +1,37 @@
+.red{
+	color:red;
+	font-size:6pt;
+}
+.blue{
+	color:blue;
+	font-size:6pt;
+}
+.green{
+	color:green;
+	font-size:6pt;
+}
+.big{
+	font-size: 20pt;
+}
+.tiny{
+	font-size:8pt;
+}
+.centered{
+	text-align:center;
+}
+.bold{
+	font-weight:bold;
+}
+.otherFont{
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+}
+.combo{
+	font-size: 24pt;
+	color:orange;
+
+}
+.styledFont{
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+	color:green;
+
+}

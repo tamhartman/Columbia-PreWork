@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	function myFunction(){
+		document.getElementById("demo").innerHTML = "Hello World";
+	}
+</script>
+</head>
+<body>
+	<p>Click the button to trigger a function.</p>
+
+	<button onclick="myFunction()">Click me</button>
+
+	<p id="demo"></p>
+
+</body>
+</html>
+
+<!---
+
+	this is a different way of organizing the same code, but in a way that's cleaner. Here,
+	we have the myFunction() script at the top of the code, inside of the head. Then we lay out the page below. The function will get called regardless of what order it's in so it's better to use clean code. 
+	-->

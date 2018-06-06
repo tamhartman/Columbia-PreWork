@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		function displayDate(){
+			document.getElementById("demo").innerHTML = Date();
+		}
+
+		document.getElementById("myBtn").onclick = displayDate2;
+
+		function displayDate2(){
+			document.getElementbyId("demo2").innerHTML = Date();
+		}
+
+		function checkCookies(){
+			var text = " ";
+			if(navigator.cookieEnabled == true){
+				text = "cookies are enabled";
+			}
+			else{
+				text = "cookies are not enabled";
+			}
+		document.getElementById("demo").innerHTML = text;
+		}
+		function myFunction(){
+			var x = document.getElementById("fname");
+			x.value = x.value.toUpperCase();
+		}
+		function mOver(obj){
+			obj.innerHTML = "Thank You"
+		}
+		function mOut(obj){
+			obj.innerHTML = "Mouse Over Me"
+		}
+		function mDown(obj{
+			obj.style.backgroundColor = "1EC5E5";
+			obj.innerHTML = "release me";
+		}
+		function mUp(obj){
+			obj.style.backgroundColor = "D94A38";
+			obj.innerHTML="Thank You";
+		}
+		function myMessage(){
+			alert("This message was triggered from the onload event")
+		}
+		function myFunction(x){
+			x.style.background = "yellow";
+		}
+	</script>
+</head>
+<body onload="checkCookies()">
+	<h1 onclick="this.innerHTML='Ooops!'">Click on this text!</h1>
+	<br>
+	<h1 onclick="changeText(this)"> Now click on this text!</h1>
+	<br>
+	<p>Click the button to display the date</p>
+	<br>
+	<button onclick="displayDate()">The time is?</button>"
+	<br>
+	<p id="demo"></p>
+	<br>
+	<p>Click "Try it" to execute the displayDate2() function</p>
+	<button id="myBtn">Try it</button>
+	<p id="demo2"></p>
+	<br>
+	<p>Enter your name: <input type="text" id="fname" onchange="myFunction()">
+		<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+	<div onmouseover="mOver(this" onmouseout="mOut(this)" style="background-color:#D94A38;width:120px;height:20px;padding:40;">
+	Mouse Over Me</div>
+	<br>
+	<div onmousedown="mDown(this)" onmouseup="mUp(this)" style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+	Click Me</div>
+	<br>
+	Enter Your Name: <input type="text" onfocus="myfunction(this)">
+	<p>When the input field gets focus, a function is triggered which changes the background-color.</p>
+	<h1 onmouseover="style.color='red'" onmouseout="style.color='black'">
+	Mouse over this text</h1>
+</body>
+</html>
+
+<!---onclick="this.innerHTML='Ooops!'" will replace any text in the tag with the text assigned to it.-->
+<!-- onclick="changeText(this)" will do the same thing to whatever element it's added to-->
+<!--- the displayDate() function is in the script tag locate in the html head. It replaces whatever is in the tag with the ID "demo" with the actual date -->
+<!--- displayDate2() is another way of displaying the date--->
+<!--- this bit of code uses onload to check and see if cookies are enabled when the body is finished loading. -->
+<!--- finally some practical use of some javascript I know! myFunction gets the text that is input by the user and uses the toUpperCase() built-in function to convert whatever text is input to all caps-->
+<!-- the mouseOver example incorporates HTML, CSS, AND Javascript. The CSS is set up internally in this file which I'm not crazy about but it's not like I have to use it in my own designs. mOver(obj) and mOut(obj) call the onmouseover and onmouseout functions, which in this case changes the text to whatever is in the obj.innerHTML text according to each function.-->
